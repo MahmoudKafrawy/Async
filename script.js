@@ -4,7 +4,7 @@ x.then((data) => {
   return data.json();
 }).then((user) => {
   for (var i = 0; i < user.length; i++) {
-    userEL = document.createElement("div");
+    userEL = document.createElement("span");
     userEL.innerHTML = user[i].name;
     document.body.append(userEL);
   }

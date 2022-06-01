@@ -7,16 +7,7 @@ x.then((data) => {
     userEL = document.createElement("button");
     userEL.innerHTML = user[i].name;
     userEL.addEventListener("click", function () {
-      var y = fetch(`https://jsonplaceholder.typicode.com/posts?userId=${spans[i]}`);
-      async function t() {
-        try {
-          var ids = await getids;
-          console.log(ids);
-        } catch (e) {
-          console.log(e);
-        }
-      }
-      t();
+      console.log("Hello");
     });
     document.body.append(userEL);
   }

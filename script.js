@@ -4,10 +4,10 @@ try {
     return data.json();
   }).then((user) => {
     for (let i = 0; i < user.length; i++) {
-      let userEL = document.createElement("button");
+      let userEL = document.createElement("span");
       let container = document.getElementById("users");
       userEL.innerText = user[i].name;
-      document.body.append(container);
+      // document.body.append(container);
       container.append(userEL);
       userEL.addEventListener("click", function (e) {
         // console.log(e.target.innerText);
@@ -27,9 +27,10 @@ async function asyncFunction(i) {
     let z = document.getElementById("posts");
     z.innerHTML = "";
     y.forEach(function (post) {
-      let postEL = document.createElement("div");
-      postEL.innerHTML = post.title;
-      z.appendChild(postEL);
+      z.innerHTML += `${post.title} <br/>`;
+      // let postEL = document.createElement("div");
+      // postEL.innerHTML = post.title;
+      // z.append(postEL);
     });
   } catch (error) {
     console.log(error);

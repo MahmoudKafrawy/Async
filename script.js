@@ -7,7 +7,6 @@ try {
       let userEL = document.createElement("button");
       let container = document.getElementById("users");
       userEL.innerText = user[i].name;
-      document.body.append(container);
       container.append(userEL);
       userEL.addEventListener("click", function (e) {
         // console.log(e.target.innerText);
@@ -31,7 +30,7 @@ async function asyncFunction(i) {
     y.forEach(function (post) {
       let postEL = document.createElement("div");
       postEL.innerHTML = post.title;
-      z.appendChild(postEL);
+      z.append(postEL);
     });
   } catch (error) {
     console.log(error);

@@ -1,0 +1,43 @@
+function* fibonacci(n) {
+  let a = 0;
+  let b = 1;
+  for (let i = 0; i < n; i++) {
+    yield a;
+    [a, b] = [b, a + b];
+  }
+}
+let fib = fibonacci(10);
+console.log(fib.next());
+console.log(fib.next());
+console.log(fib.next());
+console.log(fib.next());
+console.log(fib.next());
+console.log(fib.next());
+console.log(fib.next());
+console.log(fib.next());
+console.log(fib.next());
+console.log(fib.next());
+console.log(fib.next());
+
+// Create a generator that returns fibonacci series that takes only parameter passed determines the max number of the displayed series should not exceed its value
+
+function* fibonacci2(n) {
+  let a = 0;
+  let b = 1;
+  while (a < n) {
+    yield a;
+    [a, b] = [b, a + b];
+  }
+}
+let fib2 = fibonacci2(20);
+console.log(fib2.next());
+console.log(fib2.next());
+console.log(fib2.next());
+console.log(fib2.next());
+console.log(fib2.next());
+console.log(fib2.next());
+console.log(fib2.next());
+console.log(fib2.next());
+console.log(fib2.next());
+console.log(fib2.next());
+
